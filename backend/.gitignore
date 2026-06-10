@@ -2,4 +2,9 @@
 *.onnx.data
 *.tflite
 google_vision_key.json
+test/
+*.png
+*.jpg
+*.jpeg
+*.webp
 __pycache__/
