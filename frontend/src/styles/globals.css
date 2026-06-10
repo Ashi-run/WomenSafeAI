@@ -1,0 +1,236 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Google Fonts are loaded via index.html ─── */
+
+@layer base {
+  :root {
+    --color-bg:           #F8F7F4;
+    --color-surface:      #FFFFFF;
+    --color-teal:         #1A6B5A;
+    --color-teal-light:   #2faa8e;
+    --color-coral:        #E8614A;
+    --color-lavender:     #7B6EA8;
+    --color-sage:         #4CAF79;
+    --color-amber:        #F5A623;
+    --color-charcoal:     #2C2C2C;
+    --color-slate:        #6B7280;
+    --color-border:       #E5E3DF;
+
+    --radius-card:        12px;
+    --radius-btn:         8px;
+    --shadow-card:        0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.06);
+    --shadow-elevated:    0 4px 6px rgba(0,0,0,0.08), 0 12px 32px rgba(0,0,0,0.1);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-charcoal);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+
+  h4, h5, h6 {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+}
+
+@layer components {
+  /* ─── Buttons ─── */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg
+           bg-teal-500 text-white font-medium text-sm
+           hover:bg-teal-600 active:bg-teal-700
+           transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg
+           bg-white text-teal-600 font-medium text-sm border border-teal-200
+           hover:bg-teal-50 active:bg-teal-100
+           transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg
+           text-slate-600 font-medium text-sm
+           hover:bg-slate-100 hover:text-slate-800
+           transition-all duration-200;
+  }
+
+  /* ─── Cards ─── */
+  .card {
+    @apply bg-white rounded-xl border border-[#E5E3DF] shadow-card;
+  }
+
+  .card-hover {
+    @apply card transition-all duration-200 hover:shadow-card-hover hover:-translate-y-0.5;
+  }
+
+  /* ─── Sections ─── */
+  .section {
+    @apply py-20 px-4;
+  }
+
+  .section-sm {
+    @apply py-12 px-4;
+  }
+
+  .container {
+    @apply max-w-6xl mx-auto;
+  }
+
+  /* ─── Risk Score Colors ─── */
+  .risk-low    { @apply text-sage-500; }
+  .risk-medium { @apply text-amber-500; }
+  .risk-high   { @apply text-coral-500; }
+  .risk-critical { @apply text-red-600; }
+
+  .risk-bg-low      { @apply bg-sage-500; }
+  .risk-bg-medium   { @apply bg-amber-500; }
+  .risk-bg-high     { @apply bg-coral-500; }
+  .risk-bg-critical { @apply bg-red-600; }
+
+  .risk-border-low      { @apply border-l-4 border-sage-500; }
+  .risk-border-medium   { @apply border-l-4 border-amber-500; }
+  .risk-border-high     { @apply border-l-4 border-coral-500; }
+  .risk-border-critical { @apply border-l-4 border-red-600; }
+
+  /* ─── Form Elements ─── */
+  .input {
+    @apply w-full px-4 py-3 rounded-lg border border-[#E5E3DF]
+           bg-white text-[#2C2C2C] placeholder:text-slate-400
+           focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent
+           transition-all duration-200 text-sm;
+  }
+
+  .textarea {
+    @apply input resize-none leading-relaxed;
+  }
+
+  /* ─── Upload Zone ─── */
+  .upload-zone {
+    @apply border-2 border-dashed border-[#E5E3DF] rounded-xl p-8
+           flex flex-col items-center justify-center text-center gap-3
+           cursor-pointer hover:border-teal-400 hover:bg-teal-50
+           transition-all duration-200;
+  }
+
+  .upload-zone-active {
+    @apply border-teal-500 bg-teal-50;
+  }
+
+  /* ─── Badges ─── */
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium;
+  }
+
+  .badge-low      { @apply bg-green-50 text-green-700; }
+  .badge-medium   { @apply bg-amber-50 text-amber-700; }
+  .badge-high     { @apply bg-orange-50 text-orange-700; }
+  .badge-critical { @apply bg-red-50 text-red-700; }
+  .badge-info     { @apply bg-teal-50 text-teal-700; }
+  .badge-neutral  { @apply bg-slate-100 text-slate-600; }
+
+  /* ─── Animated Delay Utilities ─── */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+
+  .animate-fade-up {
+    opacity: 0;
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+}
+
+/* ─── Scrollbar Styling ─── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* ─── Scan animation for loading screen ─── */
+@keyframes scanLine {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateY(500%); opacity: 0; }
+}
+
+.scan-line {
+  animation: scanLine 2.5s ease-in-out infinite;
+}
+
+/* ─── Shimmer for skeleton loading ─── */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}
+
+/* ─── Progress bar animation ─── */
+@keyframes progressFill {
+  from { width: 0%; }
+  to   { width: var(--progress-target); }
+}
+
+.progress-bar {
+  animation: progressFill 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: 300ms;
+}
+
+/* ─── Print: hide interactive chrome ─── */
+@media print {
+  [data-no-print] { display: none !important; }
+  header { display: none !important; }
+  footer { display: none !important; }
+  .card  { box-shadow: none !important; border: 1px solid #e5e3df !important; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+
+/* ─── Focus-visible polish ─── */
+:focus-visible {
+  outline: 2px solid #1A6B5A;
+  outline-offset: 2px;
+  border-radius: 4px;
+}

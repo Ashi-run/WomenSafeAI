@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "womensafe-ai",
+  "private_key_id": "43bf9f9836579f732c41e100b60392e93bc9c8a5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDYvTfUfcI8Y0sG\nKEAyfFTJw6ZGv3oHA9Cv1kAOxZ2547rr4Rh9+CHzoVHwsA4LVnN3Lek4fOEHL+qe\nDY599MBvvGDAh8BqQ+PIKqxzlz16TMiQYu6zgYxs/mGQ3MNSQxd/t7w8Pj8OjBR7\nCFF8l0BmWBm6zUnP/pNsVaBcUZbjgBYS+VX+QI/RSwjrG1wjmq4ghQooshJ5xNTK\ntMZbxyFCS9cRTgwyZvsA/m86C9e3TpSmAhdggMnVLX13DHcgdq20R7tr1SXUpJ+F\nXhGjuL02smfzrOnwT4nFZQU1I8C1QMfXwhBDvPzbkbmxG0kf648UrP6vwdYLjfjB\nt32cZpKdAgMBAAECggEACewDmcfWCVNW/xBUUVtYEFJ+Eqq3qImNV0yyFbBd65bC\nxa3szpt6MRUsqJ2OpF3lSZ/sQh3pY/MBb7yEI5JS8D/fQqu+7GkbjNwd6pQSXZO/\n8hLYBZdZI9uIq4vc/y+QwakvcKc9gL97PTSgx64u5bXZG7BD1Zs8Xs8UA8CSbUCo\nC9buhAln0iaW/4u1GJCKmTOwqXVKTeKL6X80SbSACGadG9ZxkZ3bOXEZcN/h/bjR\ntpR3JJy5fLYHY7R40/7PP2GRO7erwwj8BZhzdH/6Ox5GDaN0qj4PWo8iWWFfMMoL\nBCEe5curzNuCmjOYRVIHHMUhTGBmzmy/dy0LaQQ6+wKBgQD+DT70zBXvuVPXAEq2\nTct+z8Gj7sEpNS3C2UUpAWhsqRjm5ZWth56QZPpyoZ+QfT7HpXO1I5UDy0qUXWnM\ngHZ4XNuB51WZwJbZGJwThSxDYQ4yw47r6a3SZ41SIaw4OHeItqzIZV0TXc/pQeYd\npfQIIQyDURZmnkpQXed9Qqs66wKBgQDaZrhYGND/9JrB1z42Owo7hnBUTxQECC0N\nar/FUq4VWvQXxHQzQhdQ+KBY3cR6DzqOUpzigjgXbvFHo3PyPzZUIPwUNGWm1vdJ\nQVPtvYzTcyhaV4J/aOk6R2b1t2guowzfNIbAUS2sfjp1Qcgmk8giAs8UZ/QTsvzC\nUnKAmBv2lwKBgAnxcMZZ+n3QbhSbIVFzSASlkvmcjZjUSP84S7moIXMnRx86WxpY\nlX8nRJoZ80nPbRaZRicPxnRIj5mw8kQbvwdE8x5pdHM5E25ZxToKW0oj0U9xUfWv\nxqrWfLR7NudYZm1GYQrS1Mq+QDXr61q7tQpgaMH2+X54sYXltvqzEkqTAoGAfzDp\nVO0G8rlqU09ePMj/eZEe5Aq1tm9ohXLQwkMXfPpeQ2U24w8vcwmIoJhur0MlL/Ou\nyD9cGVGUFMt9X+wuYKphBAdL1/FDTJdOIJuOYyqiqpJiPn9DrJweuyUX+GkeuvLl\nMyVTuyw8MUOhI85W9G+8V77+p2ZKy4SmiHuNdXsCgYB1JSNqWCxorwhvdwyMU3bI\nakmck3Awg+2dJZSLvSRVQPjBisJVBgn7XHzLf+ykRrx/NPCokszk9AJrNVuCDMXX\n0GHgd79+C67dfItqj2K9ifokitlzIUCqkwz6yicXhJBdcJOtpWrb9XhNCgwgRtTB\nWqQCskecYeHFQmkuNBn4Gw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "womensafe-vision-api@womensafe-ai.iam.gserviceaccount.com",
+  "client_id": "115031175840713482166",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/womensafe-vision-api%40womensafe-ai.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -1,0 +1,66 @@
+{
+  "model_name": "womensafe-distilbert-v1.0",
+  "base_model": "distilbert-base-uncased",
+  "task": "4-class text classification",
+  "classes": [
+    "Safe",
+    "Financial Scam",
+    "Sextortion",
+    "Blackmail"
+  ],
+  "label_map": {
+    "0": "Safe",
+    "1": "Financial Scam",
+    "2": "Sextortion",
+    "3": "Blackmail"
+  },
+  "dataset": "master_dataset_v2.csv (100,295 samples)",
+  "train_samples": 80236,
+  "val_samples": 10029,
+  "test_samples": 10030,
+  "training_config": {
+    "max_seq_len": 128,
+    "batch_size": 32,
+    "learning_rate": 2e-05,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "max_epochs": 4,
+    "fp16": true,
+    "class_weights": "balanced",
+    "long_text_strategy": "first_last_chunking"
+  },
+  "test_results": {
+    "macro_f1": 0.8908,
+    "per_class": {
+      "Safe": {
+        "f1": 0.9065732399065732,
+        "precision": 0.9074816299265197,
+        "recall": 0.9056666666666666
+      },
+      "Financial Scam": {
+        "f1": 0.9858585858585859,
+        "precision": 0.9838709677419355,
+        "recall": 0.9878542510121457
+      },
+      "Sextortion": {
+        "f1": 0.7746219107340465,
+        "precision": 0.6935270805812418,
+        "recall": 0.8771929824561403
+      },
+      "Blackmail": {
+        "f1": 0.8960926193921852,
+        "precision": 0.9239952248308795,
+        "recall": 0.8698258100767934
+      }
+    },
+    "gate_passed": false
+  },
+  "baseline_comparison": {
+    "tfidf_lr_macro_f1": 0.812,
+    "tfidf_svm_macro_f1": 0.815,
+    "distilbert_macro_f1": 0.8908,
+    "sextortion_improvement": "15.1%"
+  },
+  "training_date": "2026-06-07",
+  "random_seed": 42
+}
